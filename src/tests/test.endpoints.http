@@ -1,0 +1,31 @@
+@HOST=http://127.0.0.1
+@PORT=3001
+
+@idProducto=692e29d697deff529422ec36
+
+@API_KEY=KEY-UNIVERSIDAD-2024
+
+### Test Crear Producto
+POST {{HOST}}:{{PORT}}/api/v1/productos
+Content-Type: application/json
+
+{
+    "name": "Teclado Gamer Razer",
+    "stockAmount": 19
+    
+}
+
+### Test Obtener Producto por ID
+GET {{HOST}}:{{PORT}}/api/v1/productos/{{idProducto}}
+
+### Test Traer todos los Productos
+GET {{HOST}}:{{PORT}}/api/v1/productos
+
+
+### Test Actualizar Producto por ID
+PUT {{HOST}}:{{PORT}}/api/v1/productos/{{idProducto}}?api_key={{API_KEY}}
+Content-Type: application/json
+
+{
+    "name": ""
+}

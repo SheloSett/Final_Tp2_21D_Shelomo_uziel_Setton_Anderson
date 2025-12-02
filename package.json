@@ -22,7 +22,7 @@
   },
   "contributors": [],
   "scripts": {
-    "dev": "",
+    "dev": "node --watch app.js",
     "test": ""
   },
   "dependencies": {

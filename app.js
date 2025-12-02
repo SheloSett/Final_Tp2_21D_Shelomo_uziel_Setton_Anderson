@@ -1,5 +1,5 @@
 import  config  from "./src/config/config.js";
-import mongooseConnectionInstance from "./src/databases/mongo.cnx.js";
+import mongooseConnectionInstance from "./src/database/mongo.cnx.js";
 import server from "./src/server.js";
 
 const PORT = config.SERVER_PORT
