@@ -27,5 +27,12 @@ PUT {{HOST}}:{{PORT}}/api/v1/productos/{{idProducto}}?api_key={{API_KEY}}
 Content-Type: application/json
 
 {
-    "name": ""
+    "name": "Nashe"
 }
+
+### Test Eliminar Producto por ID
+DELETE {{HOST}}:{{PORT}}/api/v1/productos/{{idProducto}}?api_key={{API_KEY}}
+
+
+### Test album 
+GET {{HOST}}:{{PORT}}/api/v1/albums/csv

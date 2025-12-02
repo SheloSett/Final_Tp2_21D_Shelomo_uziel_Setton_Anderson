@@ -110,7 +110,7 @@ export const ProductController = {
                 console.log({validName, validStock})
             } else if (stockAmount) {
                 const { valid: validStock } = validateStockAmount(stockAmount)
-                if (!validStock) {
+                if (!validStock && stockAmount >= 1) {
                     return resp.status(422).json({  
                         message: "No esta validado el valor del Stock"
                     });
@@ -151,13 +151,13 @@ export const ProductController = {
 
 			const deleted = await ProductRepository.deleteOne(id);
 
-			response.status(200).json({
+			resp.status(200).json({
 				message: "Producto eliminado correctamente",
 				payload: deleted,
 			});
 		} catch (error) {
 			console.error("Error al eliminar producto:", error.message);
-			response.status(500).json({ error: "Error interno del servidor" });
+			resp.status(500).json({ error: "Error interno del servidor" });
 		}
 	},
 

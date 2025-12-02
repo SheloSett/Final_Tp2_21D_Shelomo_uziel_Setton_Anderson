@@ -11,7 +11,7 @@ export const ProductRepository = {
     },
 
     deleteOne: async (id) => {
-        return await ProductModel.destroy({ where: { id } })
+        return await ProductModel.deleteOne({ _id: id })
     },
 
     updateOne: async (id , { name, stockAmount, created_date }) => {
